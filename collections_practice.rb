@@ -59,7 +59,7 @@ def merge_data(arg1, arg2)
   arg1.each do |data_set|
     name = data_set[:first_name]
     arg2.each do |data_set_2|
-      if name == data_set_2[name]
+      if data_set_2[name]
         new_hash = data_set_2[name]
         new_hash[:first_name] = name
         new_arr << new_hash
